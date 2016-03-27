@@ -45,6 +45,15 @@ class _Base(object):
         """
         return self._pem_bytes
 
+    def __eq__(self, other):
+        return type(self) == type(other) and self._pem_str == other._pem_str
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    def __hash__(self):
+        return hash(self._pem_str)
+
 
 class Certificate(_Base):
     """

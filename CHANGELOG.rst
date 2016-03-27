@@ -36,6 +36,8 @@ Changes:
 - PEM objects now correctly handle being constructed with unicode and bytes on both Python 2 and 3,
   although passing unicode is now deprecated.
 - PEM objects now have an ``as_bytes`` method that returns the PEM-encoded content as bytes, always.
+- PEM objects are now hashable and comparable for equality.
+
 
 ----
 
