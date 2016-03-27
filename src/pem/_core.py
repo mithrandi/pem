@@ -46,7 +46,8 @@ class _Base(object):
         return self._pem_bytes
 
     def __eq__(self, other):
-        return type(self) == type(other) and self._pem_str == other._pem_str
+        return (type(self) == type(other) and
+                self._pem_bytes == other._pem_bytes)
 
     def __ne__(self, other):
         return not self.__eq__(other)
