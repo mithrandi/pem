@@ -32,6 +32,7 @@ Changes:
 
 - ``pem.twisted.certificateOptionsFromPEMs`` and ``certificateOptionsFromFiles`` will now load Ephemeral Diffie-Hellman parameters if found.
   [`21 <https://github.com/hynek/pem/pull/21>`_]
+- PEM objects are now hashable and comparable for equality.
 
 
 ----
